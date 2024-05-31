@@ -18,7 +18,6 @@ const TopMix = () => {
     })
     .then(res => res.json())
     .then(data =>{
-      console.log(21, data);
       setTopMix(data.playlists.items)
     })
     .catch(error =>{
@@ -33,7 +32,7 @@ dispatch(create(res))
   console.log(error);
 })
   }
-  }, [])
+  }, [token])
   return (
     <div className='w-[94%]  mx-auto'>
     <div className='flex justify-between w-full my-4'>
